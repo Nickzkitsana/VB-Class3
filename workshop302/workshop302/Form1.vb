@@ -58,20 +58,24 @@
         'Language
         Dim lang As String
         If chkChina.Checked = True Then
-            lang = "China"
+            lang += "China "
         End If
         If chkEnglish.Checked = True Then
-            lang = "English"
+            lang += "English "
         End If
         If chkJapan.Checked = True Then
-            lang = "Japan"
+            lang += "Japan "
         End If
         If chkThai.Checked = True Then
-            lang = "Thai"
+            lang += "Thai "
         End If
         If chkOther.Checked = True Then
-            lang = TextBoxOther.Text
+            lang += TextBoxOther.Text + " "
         End If
+
+        MessageBox.Show("Username : " & TextBoxUsername.Text & vbNewLine &
+                        "Gender : " & gender & vbNewLine &
+                        "You can speak : " & lang)
 
 
     End Sub
