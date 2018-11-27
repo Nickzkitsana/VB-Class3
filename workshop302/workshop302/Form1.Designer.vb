@@ -71,6 +71,7 @@ Partial Class Register
         '
         Me.TextBoxOther.Location = New System.Drawing.Point(203, 378)
         Me.TextBoxOther.Name = "TextBoxOther"
+        Me.TextBoxOther.ReadOnly = True
         Me.TextBoxOther.Size = New System.Drawing.Size(81, 20)
         Me.TextBoxOther.TabIndex = 3
         '

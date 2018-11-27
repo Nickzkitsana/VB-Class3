@@ -55,7 +55,12 @@
     End Sub
 
     Private Sub TextBoxNum_TextChanged(sender As Object, e As EventArgs) Handles TextBoxNum.TextChanged
-        ButtonCalculate.Enabled = True
-        ButtonClear.Enabled = True
+        If TextBoxNum.TextLength >= 1 Then
+            ButtonCalculate.Enabled = True
+            ButtonClear.Enabled = True
+        Else
+            ButtonCalculate.Enabled = False
+            ButtonClear.Enabled = False
+        End If
     End Sub
 End Class

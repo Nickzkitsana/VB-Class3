@@ -70,6 +70,7 @@
             lang += "Thai "
         End If
         If chkOther.Checked = True Then
+            TextBoxOther.ReadOnly = False
             lang += TextBoxOther.Text + " "
         End If
 
@@ -97,5 +98,14 @@
         chkOther.Checked = False
         chkThai.Checked = False
         TextBoxOther.Text = ""
+        TextBoxOther.ReadOnly = True
+    End Sub
+
+    Private Sub chkOther_CheckedChanged(sender As Object, e As EventArgs) Handles chkOther.CheckedChanged
+        If chkOther.Checked = True Then
+            TextBoxOther.ReadOnly = False
+        Else
+            TextBoxOther.ReadOnly = True
+        End If
     End Sub
 End Class
